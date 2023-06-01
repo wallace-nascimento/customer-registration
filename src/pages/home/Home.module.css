@@ -1,0 +1,40 @@
+.container{
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: -20px;
+    height: 80vh;
+    background-image: url('../../assets/gestao-de-carteira-de-clientes7.png');
+    background-repeat: no-repeat;
+    background-color: #C6E4EF;
+    background-size: cover;
+    background-position: top center;
+}
+
+.container h1{
+   color: #6464df;
+   padding-top: 30px;
+   margin-bottom: 30px;
+} 
+
+.main{
+    text-align: center;
+    width: 500px;
+}
+
+.button{
+    width: 150px;
+    margin: auto;
+}
+
+@media(max-width: 770px){
+    .main{
+        width: 200px;
+    }
+    .container h1{
+        font-size: 1.5em;
+    }
+    .button{
+        width: 100px;
+    }
+}
