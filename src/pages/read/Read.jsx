@@ -12,8 +12,6 @@ import Close from '../../animation/close/Close';
 
 import Pagination from '../../components/pagination/pagination';
 
-
-
 function Read(){
     const { id } = useParams();
     const[lists, setLists] = useState([]);
@@ -79,7 +77,7 @@ function Read(){
     }
    
       return(
-        <div> 
+        <main> 
             
             <Button />
             
@@ -109,7 +107,7 @@ function Read(){
                                         <TableCell>{list.email}</TableCell>
                                         <TableCell>{list.contact}</TableCell>
                                         <TableCell>
-                                            <Link to={`/customer-registration/edit/${list._id}`}>
+                                            <Link to={`/edit/${list._id}`}>
                                                 <EditRoadOutlinedIcon/>
                                             </Link>
                                                 <DeleteForeverOutlinedIcon
@@ -123,17 +121,17 @@ function Read(){
                             }
                     </TableBody>
                 </Table>
-                
+
             </TableContainer>
-            
-            <Pagination 
-                pages={pages}
-                setPages={setPages}
-                setCurrentPages={setCurrentPages}
-                currentPage={currentPage}
-                count={count}
-            />
-        </div>
+                <Pagination
+                    pages={pages}
+                    setPages={setPages}
+                    setCurrentPages={setCurrentPages}
+                    currentPage={currentPage}
+                    count={count}
+                />
+                       
+        </main>
     )
 }
 

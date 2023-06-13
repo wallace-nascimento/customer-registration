@@ -20,7 +20,7 @@ const style = {
   textAlign: 'center'
 };
 
- const BasicModal = ({ isOpen, setIsOpen, animation, text, reload }) => {
+ const BasicModal = ({ isOpen, setIsOpen, animation, text }) => {
 
   if(isOpen){
     return (

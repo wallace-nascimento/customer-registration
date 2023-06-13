@@ -8,14 +8,14 @@ import Home from './pages/home/Home';
 function App() {
   
   return (
-    <HashRouter hashType="hashbang" >
+    <HashRouter hashType="hashbang">
 
       <Navbar/>
       <Routes>
-        <Route exact path="/customer-registration" element={<Home/>} />
-        <Route exact path="/customer-registration/create" element={<Create/>} />
-        <Route path="/customer-registration/read" element={<Read/>} /> 
-        <Route path="/customer-registration/edit/:id" element={<Edit/>} />
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/create" element={<Create/>} />
+        <Route path="/read" element={<Read/>} /> 
+        <Route path="/edit/:id" element={<Edit/>} />
       </Routes>
 
     </HashRouter>

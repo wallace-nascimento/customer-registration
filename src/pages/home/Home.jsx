@@ -11,7 +11,7 @@ export default function Home(){
                     <h1>Welcome to client manager</h1>
                     
                     <div className={styles.button}>
-                        <Link to='/customer-registration/read'>
+                        <Link to='/read'>
                             <Button
                                 text='Start'
                             />

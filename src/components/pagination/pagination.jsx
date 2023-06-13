@@ -1,6 +1,6 @@
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import styles from './Read.module.css';
+import styles from './pagination.module.css';
 import { PaginationItem } from './styles';
 
 const Pagination = ({ pages, count, setCurrentPages, currentPage }) => {
@@ -41,6 +41,7 @@ const Pagination = ({ pages, count, setCurrentPages, currentPage }) => {
                     </div>
                 )}
             </div>
+            <div className={styles.clear}></div>
         </div>
     )
 }

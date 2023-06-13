@@ -47,7 +47,7 @@ function Edit(){
     }
 
     const reload = () =>{
-        navigate('/customer-registration/read')
+        navigate('/read')
     }
 
     //Modal "edit" animation

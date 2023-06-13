@@ -18,18 +18,18 @@ nav{
     margin-left: 40px;
 }
 
-ul{
+.list_web{
     display: flex;
     margin-right: 40px;
 }
 
-nav ul li{
+nav .list_web .item_web{
     list-style: none;
     font-style: none;
     font-size: 1.2em;
 }
 
-li a{
+.item_web a{
     text-decoration: none;
     margin: 0 10px;
     padding: .5em 1.2em;
@@ -38,20 +38,66 @@ li a{
     background-color: #1565C0;
 }
 
+/* ======= MENU Mobile =======*/
+.menu_mobile{
+    position: relative;
+    display: none;
+}
+.menu{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: rgb(230, 230, 232);
+    width: 10em;
+    margin-right: 20px;
+    padding: 1em 0;
+}
+
+.menuIcon{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+}
+
+.item_mobile{
+    list-style: none;
+    font-style: none;
+    margin: .8em 0;
+    background-color: #1565C0;
+    margin: 0;
+    padding: 5px 0 5px 5px;
+    margin-top: 1px;
+}
+
+.item_mobile a{
+    color: white;
+    text-decoration: none;
+}
+
+.item_mobile:hover{
+    background-color: #4f88c8;
+    transition: .3s;
+}
+
+/* ======= Responsive ======= */
+
 @media(max-width:760px){
-    nav ul li{
+    nav .list_web .item_web{
         font-size: 1em;
+    }
+
+    .menu{
+        display: block;
     }
 }
 
 @media(max-width:570px){
-    nav{
-        flex-direction: column;
-        text-align: center;
+    .menu_web{
+        display: none;
     }
 
-    nav ul li{
-        margin: 20px 0;
-        font-size: 1em;
+    .menu_mobile{
+        display: block;
     }
 }

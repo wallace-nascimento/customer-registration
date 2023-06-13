@@ -4,11 +4,13 @@ import AddIcon from '@mui/icons-material/Add';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 
+import styles from './button.module.css';
+
 export default function FloatingActionButtons() {
     return (
-      <Box sx={{ '& > :not(style)': { m: 1 }, position:'relative', display:'flex', justifyContent:'end', marginRight:4}}>
+      <Box sx={{ '& > :not(style)': { m: 1 }}} className={styles.button}>
         
-        <Link to='/customer-registration/create'>
+        <Link to='/create'>
           <Fab color="primary" aria-label="add">
           
           <AddIcon />
