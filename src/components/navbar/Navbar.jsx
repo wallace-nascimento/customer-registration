@@ -12,35 +12,21 @@ function Navbar(){
     const[active, setActive] = useState(false)
     
     let menuRef = useRef();
-    // const toggleMode = () =>{
-    //     setActive(!active)
-
-    // }
        
     useEffect(()=>{
         let handler =(e)=>{
-            
+            //menuRef.current !== null && 
             if(!menuRef.current.contains(e.target)){
-                setActive(!active)
+                setActive(false)
             }
         }
         document.addEventListener("mousedown", handler)
         
         return ()=>{
-            window.removeEventListener("mousedown", handler);
+            document.removeEventListener("mousedown", handler);
         }
     },[active])
 
-    // if(el.current !== null && !el.current.contains(e.target)){
-    //     setActive(!active)
-    // }
-    // if(active) {
-    //     window.addEventListener("click", onClick);
-    // }
-
-    // return () => {
-    //     window.removeEventListener("click", onClick);
-    // }
 
     return(
 
