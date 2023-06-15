@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Navbar.module.css';
@@ -10,15 +10,41 @@ import CloseIcon from '@mui/icons-material/Close';
 function Navbar(){
 
     const[active, setActive] = useState(false)
+    
+    let menuRef = useRef();
+    // const toggleMode = () =>{
+    //     setActive(!active)
 
-    const toggleMode = () =>{
-        setActive(!active)
-        console.log("toggleMode Aqui")
-    }
+    // }
+       
+    useEffect(()=>{
+        let handler =(e)=>{
+            
+            if(!menuRef.current.contains(e.target)){
+                setActive(!active)
+            }
+        }
+        document.addEventListener("mousedown", handler)
+        
+        return ()=>{
+            window.removeEventListener("mousedown", handler);
+        }
+    },[active])
+
+    // if(el.current !== null && !el.current.contains(e.target)){
+    //     setActive(!active)
+    // }
+    // if(active) {
+    //     window.addEventListener("click", onClick);
+    // }
+
+    // return () => {
+    //     window.removeEventListener("click", onClick);
+    // }
 
     return(
 
-        <nav className={styles.nav}>
+        <nav ref={menuRef} className={styles.nav}>
 
             <img src={logo} alt='client management' className={styles.image} />
             <div className={styles.menu_web}>
@@ -30,9 +56,9 @@ function Navbar(){
 
             <div className={styles.menu_mobile}>
                 {!active ? 
-                    <MenuIcon className={styles.menuIcon} onClick={()=>toggleMode()} fontSize='large'/>
+                    <MenuIcon className={styles.menuIcon} onClick={()=>setActive(!active)} fontSize='large'/>
                     : 
-                    <CloseIcon className={styles.menuIcon} onClick={()=>toggleMode()}/>
+                    <CloseIcon className={styles.menuIcon} onClick={()=>setActive(!active)}/>
                      
                     
                 }
@@ -44,6 +70,7 @@ function Navbar(){
                             </ul>
                         </div>
                     )}
+                    
             </div>
         </nav>
     )

@@ -3,11 +3,12 @@
     display: flex; 
     justify-content: end; 
     right: 80px;
+    z-index: 0;
 }
 
 @media(max-width:570px){
     .button{
         justify-content: start;
-        margin: 10px 0  0 40px;
+        margin: 10px 0  0 120px;
     }
 }

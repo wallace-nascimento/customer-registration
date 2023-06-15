@@ -3,8 +3,7 @@
     padding: 0;
 }
 nav{
-    width: 1500px;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 1% 0;
     display: flex;
@@ -40,16 +39,17 @@ nav .list_web .item_web{
 
 /* ======= MENU Mobile =======*/
 .menu_mobile{
-    position: relative;
+    width: 100%;
+    position: absolute;
     display: none;
+    z-index: 1;
 }
 .menu{
+    width: 100%;
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 0;
     background-color: rgb(230, 230, 232);
-    width: 10em;
-    margin-right: 20px;
     padding: 1em 0;
 }
 
@@ -61,6 +61,7 @@ nav .list_web .item_web{
 }
 
 .item_mobile{
+    text-align: center;
     list-style: none;
     font-style: none;
     margin: .8em 0;
