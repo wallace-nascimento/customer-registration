@@ -28,7 +28,7 @@ function Read(){
 
     //request returns the exact amount of items from the backend
     useEffect(()=>{
-        axios.get(`https://api-crud.cyclic.app/client/count`)
+        axios.get(`https://api-chi-lime-24.vercel.app.vercel.app/client/count`)
             .then(response => {
                 const data = response.data
                 setCount(data)
@@ -38,7 +38,7 @@ function Read(){
 
     useEffect(()=>{
         //Get from data backend
-        axios.get(`https://api-crud.cyclic.app/client?page=${currentPage}&limit=${limit}`)
+        axios.get(`https://api-chi-lime-24.vercel.app/client?page=${currentPage}&limit=${limit}`)
         .then(response => {
             const data = response.data.results
             setLists(data)
